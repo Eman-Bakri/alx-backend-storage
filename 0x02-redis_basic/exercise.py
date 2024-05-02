@@ -107,4 +107,3 @@ class Cache():
     def get_str(self, key):
         value = self._redis.get(key)
         return value.decode("utf-8")
-
