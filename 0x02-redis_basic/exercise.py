@@ -49,7 +49,7 @@ def call_history(method: Callable) -> Callable:
     return wrapper
 
 
-def replay(func: Callable):
+def replay(func: Callable) -> None:
     """
     Prototype: def replay(func: Callable):
     Returns: Displays history of calls of a particular function
