@@ -6,7 +6,7 @@ Incrementing values, storing lists, Retrieving lists
 """
 import redis
 import uuid
-from typing import Union, Callable, Optional
+from typing import Any, Union, Callable, Optional
 from functools import wraps
 
 
@@ -49,7 +49,7 @@ def call_history(method: Callable) -> Callable:
     return wrapper
 
 
-def replay(func: Callable):
+def replay(func: Callable) -> None:
     """
     Prototype: def replay(func: Callable):
     Displays history of calls of a particular function
